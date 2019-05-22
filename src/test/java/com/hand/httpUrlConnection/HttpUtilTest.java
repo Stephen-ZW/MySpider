@@ -1,4 +1,4 @@
-package com.hand.httpClient.com.hand.httpClient.util;
+package com.hand.httpUrlConnection;
 
 import org.junit.Test;
 
@@ -14,12 +14,12 @@ public class HttpUtilTest {
     }
 
     @Test
-    public void post() {
+    public void doPost() {
         String htmlUrl = "https://cd.fang.anjuke.com/loupan/s";
         Map<String, String> map = new HashMap<String, String>();
         map.put("kw", "A");
         HttpUtil httpUtil = new HttpUtil();
-        String result = httpUtil.post(htmlUrl, map);
+        String result = httpUtil.doPost(htmlUrl, map);
         System.out.println("result:" + result);
     }
 

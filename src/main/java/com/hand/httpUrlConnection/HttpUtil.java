@@ -3,11 +3,10 @@
  * 版权：Copyright 2017-2022 CMCC All Rights Reserved.
  * 描述：工具包
  */
-package com.hand.httpClient.com.hand.httpClient.util;
+package com.hand.httpUrlConnection;
 
 
 import org.apache.commons.lang.StringUtils;
-import org.jsoup.helper.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -119,7 +118,7 @@ public class HttpUtil {
      * @param param   请求参数
      * @return 页面信息
      */
-    public static String post(String htmlUrl, Map<String, String> param) {
+    public static String doPost(String htmlUrl, Map<String, String> param) {
         HttpURLConnection connection = null;
         InputStream inputStream = null;
         OutputStream outputStream = null;
