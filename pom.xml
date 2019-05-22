@@ -27,6 +27,7 @@
             <artifactId>juniversalchardet</artifactId>
             <version>1.0.3</version>
         </dependency>
+
         <!-- 加入slf4j log4j驱动类 -->
         <dependency>
             <groupId>org.slf4j</groupId>
