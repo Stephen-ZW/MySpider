@@ -8,7 +8,7 @@ public class DoubanSpiderTest {
 
     @Test
     public void getHtmlByUrl() {
-        String htmlUrl = "https://blog.csdn.net/";
+        String htmlUrl = "https://www.cnblogs.com/pythonfm/p/9063511.html";
         DoubanSpider.getHtmlByUrl(htmlUrl);
     }
 }

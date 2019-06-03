@@ -33,15 +33,17 @@ public class WebClientUtil {
 
     private static Logger logger = LoggerFactory.getLogger(WebClientUtil.class);
 
+    private static final String htmlUrl = "http://kns.cnki.net/kns/brief/result.aspx?dbprefix=SCPD";
+
     //建立返回结果对象集
     static List<PatentDoc> resultList = new ArrayList<PatentDoc>();
 
     static HtmlPage lastOnePage = null;
     static HtmlPage nextOnePage = null;
 
-    public String obtainHtml(String htmlUrl) {
+    public static void main(String []args) {
 
-        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
 
         System.out.println("=============开始爬虫==============");
         /** 获取当前系统时间*/
@@ -104,7 +106,6 @@ public class WebClientUtil {
         } catch (InterruptedException e) {
             logger.error("InterruptedException, {1}", e);
         }
-        return null;
     }
 
 

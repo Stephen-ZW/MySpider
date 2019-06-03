@@ -8,7 +8,7 @@ public class HttpClientCrawlerTest {
 
     @Test
     public void crawling() {
-        String[] htmlUrls = {"https://img.mukewang.com/szimg"};
+        String[] htmlUrls = {"https://yiyicclub.com"};
         HttpClientCrawler httpClientCrawler = new HttpClientCrawler();
         httpClientCrawler.crawling(htmlUrls);
     }

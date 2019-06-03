@@ -142,12 +142,14 @@ public class HttpUtil {
             // 设置缓存为false
             connection.setUseCaches(false);
 
+            connection.setRequestProperty("X-CSRF-TOKEN","8aeda894-6ae3-4619-a510-f85f5d54790d");
+
             // 设置传入参数的格式:请求参数应该是 name1=value1&name2=value2 的形式。
             connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             // 设置鉴权信息：Authorization: Bearer da3efcbf-0845-4fe3-8aba-ee040be542c0
             //connection.setRequestProperty("Authorization", "Bearer da3efcbf-0845-4fe3-8aba-ee040be542c0");
             // 设置Cookie
-            //connection.setRequestProperty("Cookie", "");
+            connection.setRequestProperty("Cookie", "SESSIONID_HAP=b25f82cd-9528-4184-820d-1eee3e7376e3; GUEST_LANGUAGE_ID=zh_CN");
             // 设置用户代理
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36");
             // 发送请求

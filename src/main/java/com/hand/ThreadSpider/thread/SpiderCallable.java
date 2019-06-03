@@ -32,7 +32,8 @@ public class SpiderCallable implements Callable<Object> {
         return this;
     }
 
-    public SpiderCallable init(Charset charset, Map<String, String> cookies, String userAgent, Map<String, String> header, Connection.Method method, int timeOut, SpiderWorker spiderWorker, int maxFailCount, String htmlUrl) {
+    public SpiderCallable init(Charset charset, Map<String, String> cookies, String userAgent, Map<String, String> header,
+                               Connection.Method method, int timeOut, SpiderWorker spiderWorker, int maxFailCount, String htmlUrl) {
         this.spiderUtil = new SpiderUtil(charset, cookies, userAgent, header, method, timeOut);
         this.spiderWorker = spiderWorker;
         this.maxFailCount = maxFailCount;
@@ -40,7 +41,7 @@ public class SpiderCallable implements Callable<Object> {
         return this;
     }
 
-
+    @Override
     public Object call() {
         int c = 0;
 

@@ -93,7 +93,7 @@ public class AnalyzedTask implements Runnable {
                 String patentPerson = td.text().replace("&nbsp;", "");
                 pc.setPatentPerson(patentPerson);
             }
-            if (td.attr("bgcolor").equals("#f8f0d2") && td.text().equals(" 【地址】")) {
+            if (td.attr("bgcolor").equals("#f8f0d2") && td.text().equals("【地址】")) {
                 int index = table.indexOf(td);
                 String patentAdress = table.get(index + 1).text().replace("&nbsp;", "");
                 pc.setPatentAdress(patentAdress);

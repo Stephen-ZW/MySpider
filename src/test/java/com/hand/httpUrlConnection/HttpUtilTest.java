@@ -11,13 +11,18 @@ public class HttpUtilTest {
 
     @Test
     public void doGet() {
+        String htmlUrl = "https://cd.fang.anjuke.com/?from=AF_Home_switchcity&kw='中海'";
+        HttpUtil httpUtil = new HttpUtil();
+        String result = httpUtil.doGet(htmlUrl);
+        System.out.println("result:" + result);
     }
 
     @Test
     public void doPost() {
-        String htmlUrl = "https://cd.fang.anjuke.com/loupan/s";
+        String htmlUrl = "http://asc.hand-china.com/hrms/staffquery/queryStaff";
         Map<String, String> map = new HashMap<String, String>();
-        map.put("kw", "A");
+        map.put("orgName", null);
+        map.put("pernr", "12518");
         HttpUtil httpUtil = new HttpUtil();
         String result = httpUtil.doPost(htmlUrl, map);
         System.out.println("result:" + result);

@@ -24,12 +24,13 @@ public class JsoupUtil {
 
 
     public static String doJsoup(String htmlUrl) {
+        String title = "";
         try {
             Document document = Jsoup.connect(htmlUrl).get();
-            String title = document.title();
+             title = document.title();
         } catch (IOException e) {
             logger.error("IOException, {0}", e);
         }
-        return null;
+        return title;
     }
 }
