@@ -11,7 +11,7 @@ public class HttpUtilTest {
 
     @Test
     public void doGet() {
-        String htmlUrl = "https://cd.fang.anjuke.com/?from=AF_Home_switchcity&kw='中海'";
+        String htmlUrl = "https://yiyicclub.com";
         HttpUtil httpUtil = new HttpUtil();
         String result = httpUtil.doGet(htmlUrl);
         System.out.println("result:" + result);

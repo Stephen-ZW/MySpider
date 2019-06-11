@@ -5,10 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author:chf
- * @description: 解析m3u8多码率视频
- * @date:2019/3/11
- **/
+ * 解析m3u8多码率视频
+ *
+ * @author Wei
+ * @version 1.0
+ * @date 2019/6/11 9:26
+ */
+
 public class M3U8 {
     private String basepath;
     private List<Ts> tsList = new ArrayList<Ts>();

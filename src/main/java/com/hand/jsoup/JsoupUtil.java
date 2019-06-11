@@ -8,6 +8,8 @@ package com.hand.jsoup;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +29,14 @@ public class JsoupUtil {
         String title = "";
         try {
             Document document = Jsoup.connect(htmlUrl).get();
-             title = document.title();
+            Elements elements = document.select("div.screening-bd li.ui-slide-item");
+            for (Element element : elements) {
+                System.out.println("电影名：" + element.attr("data-title"));
+                System.out.println("链接："+element.select("li.title a").attr("href"));
+
+            }
+            System.out.println(elements);
+            logger.info(title);
         } catch (IOException e) {
             logger.error("IOException, {0}", e);
         }

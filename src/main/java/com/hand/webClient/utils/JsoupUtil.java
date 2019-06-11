@@ -10,11 +10,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/**
- * @author:chf
- * @description: 解析html文档的工具类
- * @date:2019/3/11
- **/
+
 public class JsoupUtil {
 
     public static void valiHtmll  (String html) {

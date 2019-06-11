@@ -1,10 +1,5 @@
 package com.hand.webClient.entity;
 
-/**
- * @author:chf
- * @description:
- * @date:2019/3/19
- **/
 public class PatentDoc {
 
     private String patentName;

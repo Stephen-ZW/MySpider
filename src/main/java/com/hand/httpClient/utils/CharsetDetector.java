@@ -26,7 +26,6 @@ import java.util.regex.Pattern;
 /**
  * 字符集自动检测
  *
- * @author hu
  */
 public class CharsetDetector {
 

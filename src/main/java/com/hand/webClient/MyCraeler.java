@@ -9,10 +9,13 @@ import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
- * @author:chf
- * @description: 自定义爬虫类需要继承WebCrawler类，决定哪些url可以被爬以及处理爬取的页面信息
- * @date:2019/3/8
- **/
+ * 自定义爬虫类需要继承WebCrawler类，决定哪些url可以被爬以及处理爬取的页面信息
+ *
+ * @author Wei
+ * @version 1.0
+ * @date 2019/6/11 9:25
+ */
+
 public class MyCraeler extends WebCrawler {
 
     /**

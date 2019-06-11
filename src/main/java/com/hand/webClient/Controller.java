@@ -7,14 +7,17 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 
 /**
- * @author:chf
- * @description: 爬虫机器人控制器
- * @date:2019/3/8
- **/
+ * 爬虫机器人控制器
+ *
+ * @author Wei
+ * @version 1.0
+ * @date 2019/6/11 9:25
+ */
+
 public class Controller {
     public static void main(String[] args) throws Exception {
         String crawlStorageFolder = "D:/crawl"; // 定义爬虫数据存储位置
-        int numberOfCrawlers =2; // 定义7个爬虫，也就是7个线程
+        int numberOfCrawlers = 2; // 定义7个爬虫，也就是7个线程
 
         CrawlConfig config = new CrawlConfig(); // 定义爬虫配置
         config.setCrawlStorageFolder(crawlStorageFolder); // 设置爬虫文件存储位置

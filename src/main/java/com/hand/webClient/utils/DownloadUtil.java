@@ -14,14 +14,18 @@ import java.net.URLConnection;
 import java.nio.channels.FileChannel;
 
 /**
- * @author:chf
- * @description: 将链接资源下载到本地
- * @date:2019/3/8
- **/
+ * 将链接资源下载到本地
+ *
+ * @author Wei
+ * @version 1.0
+ * @date 2019/6/11 9:26
+ */
+
 public class DownloadUtil {
 
     //文件输出路径
-    final static String downloadPath="D://exportParent//downloadFile";
+    final static String downloadPath = "D://exportParent//downloadFile";
+
     /**
      *      
      * description: 读取网页文件到本地
@@ -29,19 +33,19 @@ public class DownloadUtil {
      * @param url,fileName    
      * @return 
      */
-    public static void readFileFromWEBtoNative(String url, String fileName){
+    public static void readFileFromWEBtoNative(String url, String fileName) {
         try {
             URL myUrl = new URL(url);
             URLConnection conn = myUrl.openConnection();
             conn.connect();
             //得到图片的二进制数据，以二进制封装得到数据，具有通用性 
             byte[] data = readInputStream(conn.getInputStream());
-            File file = new File(downloadPath+fileName);
+            File file = new File(downloadPath + fileName);
 
             //该代码必须保证文档目录结构存在，如果不存在，会报错
 
             //如果完善的话，可以判断是否存在文件夹，然后再判断是否存在文件，如果不存在，可以先创建文档结构，在创建文件
-            if(!file.exists()){
+            if (!file.exists()) {
                 file.createNewFile();
             }
             //创建输出流
@@ -57,7 +61,7 @@ public class DownloadUtil {
 
     }
 
-    private static byte[] readInputStream(InputStream inputStream) throws Exception{
+    private static byte[] readInputStream(InputStream inputStream) throws Exception {
         ByteArrayOutputStream outStream = new ByteArrayOutputStream();
         //创建一个Buffer字符串
         byte[] buffer = new byte[1024];
@@ -116,7 +120,9 @@ public class DownloadUtil {
                         if (fos != null) {
                             fos.close();
                         }
-                    } catch (IOException e) {e.printStackTrace();}
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
