@@ -50,7 +50,7 @@ public class HttpClientCrawler {
             }
         };
 
-        //循环条件：待抓取的链接不空且抓取的网页不多于 1000
+        //循环条件：待抓取的链接不空且抓取的网页不多于 100
         while (!Links.unVisitedUrlQueueIsEmpty() && Links.getVisitedUrlNum() <= 100) {
 
             //先从待访问的序列中取出第一个；
@@ -71,17 +71,19 @@ public class HttpClientCrawler {
 //                System.out.println(es);
             }
 
-            //将保存文件
-            FileTool.saveToLocal(page);
+            if (page != null) {
+                //将保存文件
+                FileTool.saveToLocal(page);
 
-            //将已经访问过的链接放入已访问的链接中；
-            Links.addVisitedUrlSet(visitUrl);
+                //将已经访问过的链接放入已访问的链接中；
+                Links.addVisitedUrlSet(visitUrl);
 
-            //得到超链接
-            Set<String> links = PageParserTool.getLinks(page, "img");
-            for (String link : links) {
-                Links.addUnvisitedUrlQueue(link);
-                System.out.println("新增爬取路径: " + link);
+                //得到超链接
+                Set<String> links = PageParserTool.getLinks(page, "img");
+                for (String link : links) {
+                    Links.addUnvisitedUrlQueue(link);
+                    System.out.println("新增爬取路径: " + link);
+                }
             }
         }
     }

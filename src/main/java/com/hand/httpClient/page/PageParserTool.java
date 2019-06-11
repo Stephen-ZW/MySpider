@@ -14,6 +14,9 @@ public class PageParserTool {
 
     /* 通过选择器来选取页面的 */
     public static Elements select(Page page , String cssSelector) {
+        if(page == null){
+            return new Elements();
+        }
         return page.getDoc().select(cssSelector);
     }
 

@@ -60,6 +60,7 @@ public class HttpClientUtil {
             // 封装成为页面
             page = new Page(bytes, htmlUrl, contentType); //封装成为页面
         } catch (IOException e) {
+            e.printStackTrace();
             logger.error("IOException, {0}", e);
         } finally {
             getMethod.releaseConnection();
